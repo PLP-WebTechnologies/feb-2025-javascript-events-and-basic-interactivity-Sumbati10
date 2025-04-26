@@ -1,46 +1,67 @@
+/* Basic Styling */
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-color: #f9f9f9;
 }
 
 button {
     padding: 10px 20px;
+    font-size: 16px;
     margin: 10px;
     cursor: pointer;
-    font-size: 16px;
-}
-
-#myButton {
-    background-color: lightblue;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: lightgreen;
+    background-color: #007BFF;
+    color: white;
 }
 
-.tabs {
-    margin: 20px 0;
+button:active {
+    transform: scale(0.98);
 }
 
-.tabButton {
+/* Gallery */
+.gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.galleryImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.galleryImage:hover {
+    transform: scale(1.1);
+}
+
+/* Accordion */
+.accordionButton {
+    background-color: #007BFF;
+    color: white;
     padding: 10px;
-    margin-right: 5px;
+    font-size: 16px;
+    margin: 5px;
+    width: 100%;
+    text-align: left;
 }
 
-.tabContent {
+.accordionContent {
     display: none;
-    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
 }
 
-#tab1 {
-    background-color: lightyellow;
+/* Form Validation */
+input[type="email"]:invalid, input[type="password"]:invalid {
+    border-color: red;
 }
 
-#tab2 {
-    background-color: lightcoral;
-}
-
-#tab3 {
-    background-color: lightgoldenrodyellow;
+input[type="email"]:valid, input[type="password"]:valid {
+    border-color: green;
 }
 
